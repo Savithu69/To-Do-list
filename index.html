@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily To-Do List</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a2e0e6fd35.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="appContainer">
+    <h1 class="titleHeader">To-Do List</h1>
+
+    <div class="task-input-wrapper">
+      <input
+        type="text"
+        id="taskEntry"
+        placeholder="Add a new task."
+        maxlength="100"
+        autocomplete="off"
+      />
+      <select id="taskPrioritySelect">
+        <option value="High">High Priority</option>
+        <option value="Medium" selected>Medium Priority</option>
+        <option value="Low">Low Priority</option>
+      </select>
+      <button id="submitNewTask">Add Task</button>
+      <span id="charLimiter">0/100</span>
+    </div>
+
+    <ul id="taskDisplayList"></ul>
+    <p id="emptyStateMsg">No tasks yet.</p>
+  </div>
+
+  
+  <div class="modalOverlay" id="confirmModal">
+    <div class="modalContent">
+      <p class="modalMessage" id="modalMessage">Are you sure?</p>
+      <div class="modalButtons">
+        <button class="modalButton confirm" id="modalConfirm">Yes</button>
+        <button class="modalButton cancel" id="modalCancel">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
